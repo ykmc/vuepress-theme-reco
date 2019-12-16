@@ -17,7 +17,7 @@
       </ModuleTransition>
 
       <ModuleTransition delay="0.08">
-        <p v-if="recoShowModule" class="description">
+        <p v-show="recoShowModule" class="description">
           {{ $description || 'Welcome to your vuePress-theme-reco site' }}
         </p>
       </ModuleTransition>
@@ -32,7 +32,7 @@
     </div>
 
     <ModuleTransition delay="0.24">
-      <div v-if="recoShowModule" class="home-blog-wrapper">
+      <div v-show="recoShowModule" class="home-blog-wrapper">
         <div class="blog-list">
           <!-- 博客列表 -->
           <note-abstract
@@ -79,7 +79,7 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.36">
-      <Content v-if="recoShowModule" class="home-center" custom/>
+      <Content v-show="recoShowModule" class="home-center" custom/>
     </ModuleTransition>
   </div>
 </template>
@@ -91,9 +91,10 @@ import NoteAbstract from '@theme/components/NoteAbstract'
 import pagination from '@theme/mixins/pagination'
 import ModuleTransition from '@theme/components/ModuleTransition'
 import { getOneColor } from '@theme/helpers/other'
+import moduleTransitonMixin from '@theme/mixins/moduleTransiton'
 
 export default {
-  mixins: [pagination],
+  mixins: [pagination, moduleTransitonMixin],
   components: { NoteAbstract, TagList, FriendLink, ModuleTransition },
   data () {
     return {

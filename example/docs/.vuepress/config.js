@@ -11,7 +11,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: 'TimeLine', link: '/timeLine/', icon: 'reco-date' },
+      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
       { text: 'Contact',
         icon: 'reco-message',
         items: [
@@ -37,6 +37,7 @@ module.exports = {
       }
     },
     logo: '/head.png',
+    authorAvatar: '/head.png',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -53,12 +54,9 @@ module.exports = {
     /**
      * 密钥 (if your blog is private)
      */
-
-    // keyPage: {
-    //   keys: ['your password'],
-    //   color: '#42b983',
-    //   lineColor: '#42b983'
-    // },
+    keyPage: {
+      keys: ['123456']
+    },
     friendLink: [
       {
         title: '午后南杂',

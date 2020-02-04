@@ -47,7 +47,7 @@
         </div>
         <div class="info-wrapper">
           <PersonalInfo/>
-          <h4><i class="iconfont reco-category"></i> 分类</h4>
+          <h4><i class="iconfont reco-category"></i> Category</h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
@@ -57,7 +57,7 @@
             </li>
           </ul>
           <hr>
-          <h4 v-if="$tags.list.length !== 0"><i class="iconfont reco-tag"></i> 标签</h4>
+          <h4 v-if="$tags.list.length !== 0"><i class="iconfont reco-tag"></i> 标Tag</h4>
           <TagList @getCurrentTag="getPagesByTags" />
           <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><i class="iconfont reco-friend"></i> 友链</h4>
           <FriendLink />

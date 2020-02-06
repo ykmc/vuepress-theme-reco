@@ -8,37 +8,7 @@
   </div>
 </template>
 
-<script>
-const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
-]
-
-export default {
-  computed: {
-    noFoundPageByTencent () {
-      return this.$themeConfig.noFoundPageByTencent !== false
-    }
-  },
-  mounted () {
-    if (this.noFoundPageByTencent) {
-      const dom = document.createElement('script')
-      dom.setAttribute('homePageName', '回到首页')
-      dom.setAttribute('homePageUrl', '/')
-      dom.setAttribute('src', '//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js')
-
-      document.body.append(dom)
-    }
-  },
-  methods: {
-    getMsg () {
-      return msgs[Math.floor(Math.random() * msgs.length)]
-    }
-  }
-}
-</script>
+404 not found
 
 <style src="../styles/theme.styl" lang="stylus"></style>
 

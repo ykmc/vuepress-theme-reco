@@ -1,14 +1,11 @@
 <template>
   <div class="theme-container" v-if="!noFoundPageByTencent">
     <div class="content">
-      <h1>404</h1>
-      <blockquote>{{ getMsg() }}</blockquote>
-      <router-link to="/">Take me home.</router-link>
+      <h1>404 Not Found</h1>
     </div>
   </div>
 </template>
 
-404 not found
 
 <style src="../styles/theme.styl" lang="stylus"></style>
 
